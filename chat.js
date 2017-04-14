@@ -19,6 +19,13 @@ function getMessages() {
     request.send();
 }
 
+function sendMessage() {
+    let request = new XMLHttpRequest();
+    request.open('POST', 'https://tiy-28202.herokuapp.com/chats');
+
+    request.send()
+}
+
 function addMessage(message) {
         
     let parent = document.querySelector('.convo');
@@ -82,6 +89,15 @@ function addMessage(message) {
 
 window.addEventListener('load', function() {
 getMessages();
+
+let sendBtn = document.querySelector('#send');
+sendBtn.addEventListener('click', function() {
+    let name = document.querySelector('#name');
+    let message = document.querySelector('#message');
+    console.log(name.value);
+    console.log(message.value);
+
+})
 
 let retrieve = document.querySelector('.ear button');
 retrieve.addEventListener('click', function () {
