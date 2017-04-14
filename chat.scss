@@ -9,7 +9,7 @@ header {
     background-color: #B9CDDA;
 
         h1 {
-            @include grid-column(12);
+            @include grid-column(4);
             color: white;
             margin-left: 30px;
         }
@@ -17,6 +17,13 @@ header {
         img {
             height: 40px;
             margin-bottom: 50px;
+        }
+
+        h2 {
+            @include grid-column(2);
+            color: white;
+            display: inline-block;
+            line-height: 90px;;
         }
 }
 
@@ -44,7 +51,7 @@ main {
                     background-color: #44C2FC;
                     color: white;
 
-                    p.message {
+                    p.text {
                         font-size: 1.3em;
                     }
                 }
@@ -82,7 +89,7 @@ main {
                     background-color: lightgray;
                     color: white;
 
-                    p.message {
+                    p.text {
                         font-size: 1.3em;
                         text-align: right;
                     }
@@ -131,13 +138,13 @@ footer {
 }
 
 footer button {
-    margin-left: 20px;
+    margin-left: 10px;
     color: #fff;
     background-color: #6496c8;
     text-shadow: -1px 1px #417cb8;
     border: none;
     font-size: 1em;
-    padding: 10px 10px;
+    padding: 5px 5px;
     border-radius: 5px;
 }
 
@@ -146,6 +153,8 @@ footer input {
     font-size: 1.3em;
     color: gray;
     padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
 }
 
 

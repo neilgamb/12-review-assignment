@@ -1382,7 +1382,7 @@ header {
   header::after {
     clear: both; }
   header h1 {
-    width: 100%;
+    width: 33.33333%;
     float: left;
     padding-right: 0.625rem;
     padding-left: 0.625rem;
@@ -1397,6 +1397,20 @@ header {
   header img {
     height: 40px;
     margin-bottom: 50px; }
+  header h2 {
+    width: 16.66667%;
+    float: left;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    color: white;
+    display: inline-block;
+    line-height: 90px; }
+    @media print, screen and (min-width: 40em) {
+      header h2 {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+    header h2:last-child:not(:first-child) {
+      float: right; }
 
 main {
   max-width: 100em;
@@ -1442,7 +1456,7 @@ main {
         padding: 15px;
         background-color: #44C2FC;
         color: white; }
-        main section.convo div.sent div.bubble p.message {
+        main section.convo div.sent div.bubble p.text {
           font-size: 1.3em; }
       main section.convo div.sent div.sentmeta {
         display: inline-block;
@@ -1478,7 +1492,7 @@ main {
         padding: 15px;
         background-color: lightgray;
         color: white; }
-        main section.convo div.received div.bubble p.message {
+        main section.convo div.received div.bubble p.text {
           font-size: 1.3em;
           text-align: right; }
       main section.convo div.received div.receivedmeta {
@@ -1525,20 +1539,22 @@ footer {
       display: inline-block; }
 
 footer button {
-  margin-left: 20px;
+  margin-left: 10px;
   color: #fff;
   background-color: #6496c8;
   text-shadow: -1px 1px #417cb8;
   border: none;
   font-size: 1em;
-  padding: 10px 10px;
+  padding: 5px 5px;
   border-radius: 5px; }
 
 footer input {
   border: none;
   font-size: 1.3em;
   color: gray;
-  padding: 5px; }
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 5px; }
 
 @media (max-width: 1000px) {
   main section.convo {
