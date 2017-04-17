@@ -12,6 +12,19 @@ function getMessages() {
                     } else {
                         addMessage(response.chats[i]);
                     }
+            }
+
+            for (let i = 0; i < response.chats.length; i++){
+                let array = response.chats[i].message.split(" ");
+                console.log(array);
+                for (let c = 0; c < array.length; c++){
+                    let arrayTwo = array[c].split("");
+                    console.log(arrayTwo);
+                    console.log(arrayTwo[0]);
+                    if(arrayTwo[0] === 'h') {
+                        return true;  // Not sure why this isn't working
+                    }
+                }
             }     
     });
 
@@ -74,8 +87,8 @@ function addMessage(message) {
 
     let name = document.querySelector('#name');
 
-    console.log(name);
-    console.log(name.value === message.from)
+    // console.log(name);
+    // console.log(name.value === message.from)
 
     if (name.value === message.from){
             parent.appendChild(sent);
@@ -96,8 +109,6 @@ function addMessage(message) {
             received.appendChild(bubbleRec);
             bubbleRec.appendChild(textRec);
     }
-
-
 }
 
 window.addEventListener('load', function() {
