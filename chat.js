@@ -13,19 +13,6 @@ function getMessages() {
                         addMessage(response.chats[i]);
                     }
             }
-
-            for (let i = 0; i < response.chats.length; i++){
-                let array = response.chats[i].message.split(" ");
-                console.log(array);
-                for (let c = 0; c < array.length; c++){
-                    let arrayTwo = array[c].split("");
-                    console.log(arrayTwo);
-                    console.log(arrayTwo[0]);
-                    if(arrayTwo[0] === 'h') {
-                        return true;  // Not sure why this isn't working
-                    }
-                }
-            }     
     });
 
     request.send();
@@ -133,7 +120,7 @@ sendBtn.addEventListener('click', function() {
         message: message.value,
     }));
 
-})
+    })
 
 let retrieve = document.querySelector('.ear button');
 retrieve.addEventListener('click', function () {
